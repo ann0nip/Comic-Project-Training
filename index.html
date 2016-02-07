@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>Starter Template - Materialize</title>
+
+  <!-- CSS  -->
+  <link href="css/materialIcon.css" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+<body>
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+      <div class="row center">
+        <img src="img/comic-banner.jpg">
+      </div>
+    </div>
+  </div>
+  <nav class="light-blue lighten-1" role="navigation">
+    <div class="nav-wrapper container">
+      <div class="right hide-on-med-and-down">
+        <a class="waves-effect waves-light btn modal-trigger" id="btnSignIn" href="#modal1">Sign In</a>
+      </div>
+
+      <span class="right hide-on-med-and-down" id="welcomeUser">
+        <a class="waves-effect waves-light modal-trigger" href="#modal2">
+      
+        </a>
+      </span>
+
+      <ul id="nav-mobile" class="side-nav mobile sidebar">
+          <div class="collection">
+            <a href="#!" class="collection-item waves-purple">Popular</a>
+            <a href="#qualification" class="collection-item waves-purple">Qualifications</a>
+            <a href="#!" class="collection-item waves-purple">Top Searches</a>
+            <a href="#recommended" class="collection-item waves-purple">Recommended</a>
+          </div>
+      </ul>
+      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+
+
+  <div class="container">
+    <div class="section">
+
+      <!--   Icon Section   -->
+      <div class="row">
+        <div class="col no-mobile sidebar l2">
+          <div class="collection">
+            <a href="#!" class="collection-item waves-effect waves-purple">Popular</a>
+            <a href="#qualification" class="collection-item waves-effect waves-purple">Qualifications</a>
+            <a href="#!" class="collection-item waves-effect waves-purple">Top Searches</a>
+            <a href="#recommended" class="collection-item waves-effect waves-purple">Recommended</a>
+          </div>
+        </div>
+        <div class="col comic-container s12 l10">
+          <div class="row">
+            <div class="col tabs-container s12">
+              <ul class="tabs">
+                <li class="tab col s3"><a class="active" href="#all">All</a></li>
+                <li class="tab col s3 disabled"><a href="#">Genres</a></li>
+                <li class="tab col s3 disabled"><a href="#edition">Edition</a></li>
+                <li class="tab col s3 disabled"><a href="#">News</a></li>
+                <li class="tab col s3 disabled"><a href="#">Characters</a></li>
+              </ul>
+            </div>
+            <!-- Here will be render the Comics Cards -->
+            <div class="col comic s12">
+            <!-- This is the secion for 'All' tab's-->
+              <div id="all" class="col s12">
+              <!-- here start the card.-->
+                <div class="data"></div>
+              </div>
+              <div id="edition" class="col s12">
+                <div class="row">
+                  <div class="col s12 l2">
+                    <p>
+                      <input class="with-gap" name="group1" type="radio" value="creator" id="radioCreator"  />
+                      <label for="radioCreator">Creator</label>
+                    </p>                  
+                  </div>
+                  <div class="col s12 l2">
+                    <p>
+                      <input class="with-gap" name="group1" type="radio" id="radioEdition" value="edition"  />
+                      <label for="radioEdition">Edition</label>
+                    </p>
+                  </div>
+                  <div class="col s12 l2">
+                    <p>
+                      <input class="with-gap" name="group1" type="radio" value="date" id="radioDate"  />
+                      <label for="radioDate">Date</label>
+                    </p>                  
+                  </div>
+                  <div class="col s12 l6">
+                    <p>
+                      <label for="search">Value: </label>
+                      <input id="search" placeholder="Eg: 2004/3/3" type="text">
+                    </p>                  
+                  </div>
+                  
+                <div class="row">
+                  <div class="col s12">
+                    <button class="btn search waves-effect waves-light">Search
+                    </button>                                
+                  </div>
+                </div>
+              </div>
+              <!-- here start the card.-->
+                <div class="data"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+
+  <footer class="page-footer yellow lighten-4">
+    <div class="container">
+      <div class="row">
+          <div class="col l4 s12">
+            <h5>Tabs</h5>
+            <ul>
+              <li><a href="#">Genres</a></li>
+              <li><a href="#">Editions</a></li>
+              <li><a href="#">News</a></li>
+              <li><a href="#">Characters</a></li>          
+            </ul>
+          
+          </div>
+          <div class="col l4 s12">
+            <h5>Options</h5>
+            <ul>
+              <li><a href="#">Popular</a></li>
+              <li><a href="#">Qualifications</a></li>
+              <li><a href="#">Top Searches</a></li>
+              <li><a href="#">Recommended</a></li>          
+            </ul> 
+          </div>
+          <div class="col l4 s12">
+            <p class="title social">&copy; Comic Store 2016</p>
+            <div id="social" class="">
+              <a href="#facebook"><img class="small" src="img/Facebook.svg" alt="Facebook Page"></a>
+              <a href="#twitter"><img class="small" src="img/Twitter.svg" alt="Twitter Page"></a>
+          </div> 
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+
+  </footer>
+  <!-- Modal login Structure -->
+  <div id="modal1" class="modal">
+    <form>
+      <div class="modal-content">
+        <div class="row">
+          <div class="input-field col s6">
+            <input id="user_name" type="text">
+            <label for="user_name">User Name</label>
+          </div>
+          <div class="input-field col s6">
+            <input id="password" type="password">
+            <label for="password">Password</label>
+          </div>
+        </div>
+      </div>  
+      <div class="modal-footer">
+        <a href="#!" id="enterSignIn" class="modal-action modal-close btn waves-effect waves-light" type="submit">Enter</a>
+      </div>
+    </form>
+  </div>
+    <!-- Modal Structure -->
+  <div id="modal2" class="modal">
+    <div class="modal-content">
+
+    </div>
+    <div class="modal-footer">
+      <a href="#!" id="enterSignOut" class=" modal-action btn right modal-close waves-effect waves-green">Sign out</a>
+    </div>
+  </div>
+
+
+  <!--  Scripts-->
+  <script src="js/jQuery-2.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/collection.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/login.js"></script>
+  <script src="js/init.js"></script>
+
+  </body>
+</html>
